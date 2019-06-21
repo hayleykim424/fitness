@@ -69,9 +69,10 @@ export class LoginPage implements OnInit {
           this.dataService.setUid(this.uid);
           //take user to notes
           this.router.navigate(['/tabs/home']);
-        } else {
+        }
+        else {
           // Tell the user to have a look at its mailbox
-          this.showToast('Something went wrong. Try again');
+          this.showToast('Error: Check your email and accout details');
           console.log(user);
         }
       });
