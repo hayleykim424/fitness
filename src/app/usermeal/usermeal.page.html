@@ -22,14 +22,21 @@
 
   <ion-item>
       <!-- <ion-icon class="iconSettings" name="body"></ion-icon> -->
-    <ion-label>Ingredients</ion-label>
-    <p>{{ingredients}}</p>
+      <ion-grid>
+          <ion-row class="titles">ingredients</ion-row>
+          <ion-row><p>{{ingredients}}</p></ion-row>
+      </ion-grid>
+    
   </ion-item>
 
   <ion-item>
       <!-- <ion-icon class="iconSettings" name="checkmark"></ion-icon> -->
     <!-- <p [(ngModel)]="description" ngDefaultControl>{{description}}</p> -->
-    <p>{{instruction}}</p>
+    <ion-grid>
+        <ion-row class="titles">instruction</ion-row>
+        <ion-row><p>{{instruction}}</p></ion-row>
+    </ion-grid>
+    
   </ion-item>
 </ion-list>
 

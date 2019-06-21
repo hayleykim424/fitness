@@ -28,7 +28,11 @@
   <ion-item>
       <!-- <ion-icon class="iconSettings" name="checkmark"></ion-icon> -->
     <!-- <p [(ngModel)]="description" ngDefaultControl>{{description}}</p> -->
-    <p>{{description}}</p>
+
+    <ion-grid>
+        <ion-row class="titles">description</ion-row>
+        <ion-row><p>{{description}}</p></ion-row>
+    </ion-grid>
   </ion-item>
 </ion-list>
 
