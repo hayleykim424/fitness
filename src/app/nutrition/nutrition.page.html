@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>nutrition</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+        <ion-grid>
+            <ion-row class="titles">Featured meals</ion-row>
+        </ion-grid>
+    </ion-list>
+    <ion-row style="margin-top:0; padding-top:0;">
+        <ion-col col-2>
+            <ion-card (click)="showUserMeal({title: rtitle, instruction: rinstruction, ingredients: ringredients, image: rimage})">
+                <img class="card-img" src={{rimage}}>
+                <div class="card-title">{{rtitle}}</div>
+                <!-- <div class="card-subtitle">{{rtype}}</div> -->
+            </ion-card>
+        </ion-col>
+        <ion-col col-2>
+            <ion-card (click)="showUserMeal({title: rtitle1, instruction: rinstruction1, ingredients: ringredients1, image: rimage1})">
+                <img class="card-img" src={{rimage1}}>
+                <div class="card-title">{{rtitle1}}</div>
+                <!-- <div class="card-subtitle">{{rtype1}}</div> -->
+            </ion-card>
+        </ion-col>
+      </ion-row>
+
+        <ion-card>
+                <ion-card-header>
+                  <ion-card-subtitle>Nutrition for Women</ion-card-subtitle>
+                  <ion-card-title style="color: #DD7975;">All recipes available</ion-card-title>
+                </ion-card-header>
+    
+                <ion-card-content>
+                  <img class="welcome-card-img" src="assets/img/foodimg.png"/>
+                </ion-card-content>
+
+                <ion-card-content>
+                    Enjoy making food and being healthy at the same time
+                </ion-card-content>
+    
+                <ion-card-content>
+                  - Members exclusive recipes! 
+                </ion-card-content>
+        </ion-card>
+
+        <ion-list  *ngIf="showRecipe">
+            <ion-grid>
+                <ion-row class="titles">Recipes for just you!</ion-row>
+                <ion-row class="sub-titles">Healthy and delicious meals for you</ion-row>
+            </ion-grid>
+
+          <ion-row *ngFor="let RecipeAny of recipeTypes">
+              <ion-col>
+                  <ion-card  (click)="showUserMeal({title: RecipeAny.rtitle, instruction: RecipeAny.rinstruction, ingredients: RecipeAny.ringredients, image: RecipeAny.rimage})">
+                      <img class="card-img" src={{RecipeAny.rimage}}/>
+                      <div class="card-title">{{RecipeAny.rtitle}}</div>
+                  </ion-card>
+              </ion-col>
+          </ion-row>
+      </ion-list>
+
+</ion-content>
+
+
+
+
+
+
+
+
+

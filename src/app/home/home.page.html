@@ -1,0 +1,66 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Home
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div class="ion-padding">
+  
+        <ion-card *ngIf="showBtn">
+            <ion-card-header>
+              <ion-card-subtitle>Workout & Nutrition: Women</ion-card-subtitle>
+              <ion-card-title style="color: #DD7975;">Welcome!</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content>
+              <img class="welcome-card-img" src="assets/img/welcome1.png"/>
+            </ion-card-content>
+
+            <ion-card-content>
+              Enjoy your personalised workout plan + recipes
+  
+              <!-- <ion-button class="btnSignUp" fill="clear" color="medium" (click)="showSignup()">
+                  Sign up
+              </ion-button> -->
+            </ion-card-content>
+          </ion-card>
+
+          <ion-grid *ngIf="showGreeting">
+              <ion-row class="greeting">Hello {{name}}!</ion-row>
+          </ion-grid>
+            
+          
+          <ion-list>
+            <ion-grid>
+              <ion-row class="titles">Today's workout</ion-row>
+              <ion-row class="sub-titles">give yourself 3 minutes for this fun workout!</ion-row>
+            </ion-grid>
+
+            <ion-card (click)="showUserWorkout({title: wtitle, description: wdescription, image: wimage, type: wtype})">
+              <img class="card-img" src={{wimage}}>
+              <div class="card-title">{{wtitle}}</div>
+              <div class="card-subtitle">muscle group: {{wtype}}</div>
+            </ion-card>
+          </ion-list>
+
+
+          <ion-list>
+            <ion-grid>
+              <ion-row class="titles">Meal of the day</ion-row>
+              <ion-row class="sub-titles">Hungry? click below!</ion-row>
+            </ion-grid>
+  
+            <ion-card  (click)="showUserMeal({title: rtitle, instruction: rinstruction, ingredients: ringredients, image: rimage})">
+                <img class="card-img" src={{rimage}}/>
+                <div class="card-title">{{rtitle}}</div>
+                <div class="card-subtitle">type: {{rtype}}</div>
+            </ion-card>
+          </ion-list>
+              
+     
+    </div>
+  </ion-content>
+  

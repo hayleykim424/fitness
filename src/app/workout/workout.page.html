@@ -1,0 +1,154 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>workout</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+    <ion-list>
+      <ion-grid>
+        <ion-row class="titles">Featured workout</ion-row>
+        <ion-row class="sub-titles">today's featured workout is {{ftitle}}!</ion-row>
+      </ion-grid>
+
+      <ion-card (click)="showUserWorkout({title: ftitle, description: fdescription, image: fimage, type: ftype})">
+        <img class="card-img" src={{fimage}}>
+        <div class="card-title">{{ftitle}}</div>
+        <div class="card-subtitle">muscle group: {{ftype}}</div>
+      </ion-card>
+    </ion-list>
+
+
+    <!-- *ngFor="let workout of randomPick" -->
+
+
+    <ion-list  *ngIf="showWorkout">
+      <ion-grid>
+          <ion-row class="titles">Workout created for you</ion-row>
+          <ion-row class="sub-titles">You can do it!</ion-row>
+      </ion-grid>
+
+      <ion-row *ngFor="let WorkoutBack of randomPick">
+          <ion-col>
+              <ion-card  (click)="showUserWorkout({title: WorkoutBack.wtitle, description: WorkoutBack.wdescription, image: WorkoutBack.wimage, type: WorkoutBack.wtype})">
+                  <img class="card-img" src={{WorkoutBack.wimage}}/>
+                  <div class="card-title">{{WorkoutBack.wtitle}}</div>
+                  <div class="card-subtitle">muscle group: {{WorkoutBack.wtype}}</div>
+              </ion-card>
+          </ion-col>
+        </ion-row>
+
+        
+    
+
+    <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Not enough?</ion-card-subtitle>
+          <ion-card-content>
+              <img class="welcome-card-img" src="assets/img/workwork.png"/>
+          </ion-card-content>
+
+          <ion-card-title style="color: #DD7975;">View all workout available ⇊ </ion-card-title>
+        </ion-card-header>
+
+        
+
+        <ion-card-content>
+            Enjoy your workout session
+        </ion-card-content>
+</ion-card>
+
+    <ion-list>
+      <ion-grid>
+          <ion-row class="titles">Back</ion-row>
+      </ion-grid>
+
+      <ion-row *ngFor="let WorkoutBack of workoutTypes">
+        <ion-col>
+            <ion-card  (click)="showUserWorkout({title: WorkoutBack.wtitle, description: WorkoutBack.wdescription, image: WorkoutBack.wimage, type: WorkoutBack.wtype})">
+                <img class="card-img" src={{WorkoutBack.wimage}}/>
+                <div class="card-title">{{WorkoutBack.wtitle}}</div>
+                <div class="card-subtitle">muscle group: {{WorkoutBack.wtype}}</div>
+            </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+    
+    <ion-list>
+        <ion-grid>
+            <ion-row class="titles">Legs</ion-row>
+        </ion-grid>
+
+        <ion-row *ngFor="let WorkoutBack of workoutTypesLeg">
+          <ion-col>
+              <ion-card  (click)="showUserWorkout({title: WorkoutBack.wtitle, description: WorkoutBack.wdescription, image: WorkoutBack.wimage, type: WorkoutBack.wtype})">
+                  <img class="card-img" src={{WorkoutBack.wimage}}/>
+                  <div class="card-title">{{WorkoutBack.wtitle}}</div>
+                  <div class="card-subtitle">muscle group: {{WorkoutBack.wtype}}</div>
+              </ion-card>
+          </ion-col>
+        </ion-row>
+    </ion-list>
+  
+      <ion-list>
+          <ion-grid>
+              <ion-row class="titles">Chest</ion-row>
+          </ion-grid>
+
+          <ion-row *ngFor="let WorkoutBack of workoutTypesChest">
+            <ion-col>
+                <ion-card  (click)="showUserWorkout({title: WorkoutBack.wtitle, description: WorkoutBack.wdescription, image: WorkoutBack.wimage, type: WorkoutBack.wtype})">
+                    <img class="card-img" src={{WorkoutBack.wimage}}/>
+                    <div class="card-title">{{WorkoutBack.wtitle}}</div>
+                    <div class="card-subtitle">muscle group: {{WorkoutBack.wtype}}</div>
+                </ion-card>
+            </ion-col>
+          </ion-row>
+      </ion-list>
+
+      <ion-list>
+          <ion-grid>
+              <ion-row class="titles">Core</ion-row>
+          </ion-grid>
+
+          <ion-row *ngFor="let WorkoutBack of workoutTypesCore">
+            <ion-col>
+                <ion-card  (click)="showUserWorkout({title: WorkoutBack.wtitle, description: WorkoutBack.wdescription, image: WorkoutBack.wimage, type: WorkoutBack.wtype})">
+                    <img class="card-img" src={{WorkoutBack.wimage}}/>
+                    <div class="card-title">{{WorkoutBack.wtitle}}</div>
+                    <div class="card-subtitle">muscle group: {{WorkoutBack.wtype}}</div>
+                </ion-card>
+            </ion-col>
+          </ion-row>
+      </ion-list>
+
+      <ion-list>
+          <ion-grid>
+              <ion-row class="titles">Shoulder</ion-row>
+          </ion-grid>
+
+          <ion-row *ngFor="let WorkoutBack of workoutTypesShoulder">
+            <ion-col>
+                <ion-card  (click)="showUserWorkout({title: WorkoutBack.wtitle, description: WorkoutBack.wdescription, image: WorkoutBack.wimage, type: WorkoutBack.wtype})">
+                    <img class="card-img" src={{WorkoutBack.wimage}}/>
+                    <div class="card-title">{{WorkoutBack.wtitle}}</div>
+                    <div class="card-subtitle">muscle group: {{WorkoutBack.wtype}}</div>
+                </ion-card>
+            </ion-col>
+          </ion-row>
+      </ion-list>
+
+
+    <!-- added to see if data will show without doubling up -->
+    <!-- <ion-list> 
+      <ion-item *ngFor="let item of workoutTypes">
+        {{item.wdescription}}
+      </ion-item>
+    </ion-list>-->
+
+  </ion-list>
+
+
+</ion-content>

@@ -1,0 +1,37 @@
+<ion-header class="headerSettings">
+  <ion-toolbar>
+      <ion-button class="btnBack" fill="clear" color="medium" (click)="goBack()">
+          <ion-icon name="arrow-round-back"></ion-icon>
+      </ion-button>
+    <ion-title class="titleSettings">Meal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <img class="card-img" src={{image}} ngDefaultControl/>
+</ion-card>
+
+<ion-list>
+  <ion-item>
+      <ion-icon class="iconSettings" name="information"></ion-icon>
+    <!-- <ion-label>Dumbbell row</ion-label> -->
+    <p>{{title}}</p>
+  </ion-item>
+
+  <ion-item>
+      <!-- <ion-icon class="iconSettings" name="body"></ion-icon> -->
+    <ion-label>Ingredients</ion-label>
+    <p>{{ingredients}}</p>
+  </ion-item>
+
+  <ion-item>
+      <!-- <ion-icon class="iconSettings" name="checkmark"></ion-icon> -->
+    <!-- <p [(ngModel)]="description" ngDefaultControl>{{description}}</p> -->
+    <p>{{instruction}}</p>
+  </ion-item>
+</ion-list>
+
+</ion-content>
+

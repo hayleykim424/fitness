@@ -1,0 +1,56 @@
+a {
+    text-decoration: none;
+  }
+  
+  a:link {
+    color: #DD7975;
+  }
+  
+  a:visited {
+    color: #DD7975;
+  }
+  
+  a:active {
+    color: #DD7975;
+  }
+
+.titles{
+    margin-top: 8px;
+    font-size: 16px;
+    color: #DD7975;
+}
+
+.sub-titles{
+  margin-top: 2px;
+  font-size: 14px;
+  color: #4d4d4d;
+}
+
+.greeting {
+  font-size: 20px;
+  color: #4d4d4d;
+}
+
+.card-img{
+    min-height:150px;
+    max-width: 100%;
+}
+
+.card-title{
+    margin-left: 3px;
+    margin-top: 3px;
+    font-weight: bold;
+}
+.card-subtitle{
+    margin-left: 3px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.btnSignUp{
+    display: block;
+}
+
+.welcome-card-img{
+  height:70px;
+}
